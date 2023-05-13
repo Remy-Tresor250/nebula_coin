@@ -1,5 +1,5 @@
-import React from 'react'
-import { Text, SafeAreaView } from 'react-native'
+import {useState} from 'react'
+import { Text, SafeAreaView, View, FlatList } from 'react-native'
 
 const Home = () => {
   return (

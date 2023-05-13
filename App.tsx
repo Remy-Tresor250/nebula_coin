@@ -18,9 +18,12 @@ const App = () => {
     InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
     InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
     InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
+    PoppinsSemiBold: require("./assets/fonts/Poppins-SemiBold.ttf"),
+    PoppinsLight: require("./assets/fonts/Poppins-Light.ttf"),
+    LexendMedium: require("./assets/fonts/Lexend-Medium.ttf"),
   });
 
-  if(!fonts) return null
+  if (!fonts) return null;
 
   return (
     <NavigationContainer>
