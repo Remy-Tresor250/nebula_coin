@@ -14,11 +14,14 @@ const theme = {
 const App = () => {
   const [fonts] = useFonts({
     InterBold: require("./assets/fonts/Inter-Bold.ttf"),
-    InterLight: require("./assets/fonts/Inter-light.ttf"),
+    InterLight: require("./assets/fonts/Inter-Light.ttf"),
     InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
     InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
     InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
   });
+
+  if(!fonts) return null
+
   return (
     <NavigationContainer>
       <Stack.Navigator
