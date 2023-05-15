@@ -1,15 +1,36 @@
-import React from 'react'
-import {Text, Image, View} from "react-native"
-import { useNavigation } from '@react-navigation/native'
-import {COLORS, SIZES, SHADOWS} from "../constants"
+import React from "react";
+import { Text, Image, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { COLORS, SIZES, SHADOWS, assets } from "../constants";
+import { CircleButton } from "./Button";
 
-const NFTCard = ({data}: any) => {
-  const navigation = useNavigation()
+const NFTCard = ({ data }: any) => {
+  const navigation = useNavigation();
   return (
-    <View style={{backgroundColor: COLORS.white, borderRadius: 0}}>
-      
+    <View
+      style={{
+        backgroundColor: COLORS.white,
+        borderRadius: SIZES.font,
+        marginBottom: SIZES.extraLarge,
+        margin: SIZES.base,
+        ...SHADOWS.dark,
+      }}
+    >
+      <View style={{ width: "100%", height: 250 }}>
+        <Image
+          source={data.image}
+          resizeMode="cover"
+          style={{
+            width: "100%",
+            height: "100%",
+            borderTopLeftRadius: SIZES.font,
+            borderTopRightRadius: SIZES.font,
+          }}
+        />
+        <CircleButton imgUrl={assets.heart} handlePress={navigation}/>
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default NFTCard
+export default NFTCard;
