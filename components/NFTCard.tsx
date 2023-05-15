@@ -1,9 +1,14 @@
 import React from 'react'
-import {Text} from "react-native"
+import {Text, Image, View} from "react-native"
+import { useNavigation } from '@react-navigation/native'
+import {COLORS, SIZES, SHADOWS} from "../constants"
 
-const NFTCard = () => {
+const NFTCard = ({data}: any) => {
+  const navigation = useNavigation()
   return (
-    <Text>NFTCard</Text>
+    <View style={{backgroundColor: COLORS.white, borderRadius: 0}}>
+      
+    </View>
   )
 }
 
